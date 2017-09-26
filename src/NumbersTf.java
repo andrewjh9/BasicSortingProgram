@@ -16,16 +16,17 @@ import javafx.scene.control.TextField;
 public class NumbersTf extends TextField {
 
     public NumbersTf() {
-/*        textProperty().addListener((observable, oldValue, newValue) -> {
-    System.out.println("textfield changed from " + oldValue + " to " + newValue);
-     Pattern p = Pattern.compile("-?\\d+");
-        Matcher m = p.matcher(this.getText());
-        while (m.find()) {
-         this.setText(m.group());
-        }
-});*/
+
+            textProperty().addListener((observable, oldValue, newValue) -> {
+                Pattern p = Pattern.compile("-?\\d+");
+                Matcher m = p.matcher(this.getText());
+                while (m.find()) {
+                    this.setText(m.group());
+                }
+
+            });
+
     }
- 
-        
-    
+
+
 }

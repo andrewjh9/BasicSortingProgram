@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -24,9 +25,10 @@ public class Run extends Application {
         CustomStackPane root = new CustomStackPane();
   
         
-        Scene scene = new Scene(root, 300, 250);
-        
-        primaryStage.setTitle("Hello World!");
+        Scene scene = new Scene(root, 600, 550);
+        primaryStage.setResizable(false);
+        primaryStage.getIcons().add(new Image("icon.png"));
+        primaryStage.setTitle("Sorting Program");
         primaryStage.setScene(scene);
         primaryStage.show();
        
