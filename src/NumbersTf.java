@@ -10,6 +10,7 @@ import java.util.regex.Pattern;
 import javafx.scene.control.TextField;
 
 /**
+ * @class Defines a custom TextField with built in number validation
  * @version 0.2
  * @author AndrewHeath
  */

@@ -47,14 +47,10 @@ public class Set extends ArrayList<Integer>{
   }
   public double getSd()
   {
-	  return sqrt(variance());
+	  return sqrt(getVariance());
   }
 
-	/**
-	 * @brief Calculates the top part of the variance
-	 * @return
-	 */
-  private float variance()
+  private float getVariance()
   {
 	  float variance =0;
 	  for(int count=0;count<this.size();count++)
@@ -64,23 +60,23 @@ public class Set extends ArrayList<Integer>{
 
 	return variance/(this.size()-1);
   }
-	public int largest()
+	public int getLargest()
 	{
 		bubbleSort();
 		return get((size()-1));
 	}
-	public int smallest()
+	public int getSmallest()
 	{
 		bubbleSort();
 		return get(0);
 	}
 	public String getRange()
 	{
-  		return Integer.toString(smallest())+" -> "+Integer.toString(largest());
+  		return Integer.toString(getSmallest())+" -> "+Integer.toString(getLargest());
 	}
 	public int rangeValue()
 	{
-  		return largest()-smallest();
+  		return getLargest()-getSmallest();
 	}
 	private  float getMedian(){
   		if(size()%2==0){

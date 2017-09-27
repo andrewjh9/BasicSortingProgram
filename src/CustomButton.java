@@ -1,6 +1,6 @@
 import javafx.scene.control.Button;
 /**
- *@brief A class to define a custom button for the UI 
+ *@brief A class to define a custom button for the UI
  * @version 0.2
  * @author Andrew
  */

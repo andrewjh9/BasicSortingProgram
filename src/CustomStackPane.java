@@ -95,12 +95,11 @@ class CustomStackPane extends VBox
         clearBtn.setText("Clear");
         //Action Event for Clear Button
         clearBtn.setOnAction(event -> {
-            tf.setEditable(true);
-
-
-            set.clear();
-             sortedT.setText("Sorting:");
-             meanT.setText("");
+             tf.setEditable(true);
+             stdDevT.setText("Standard deviation: ");
+             rangeT.setText("Range: ");
+             sortedT.setText("Sorted:");
+             meanT.setText("Mean: ");
 
         });
         CustomButton genRandomBtn = new CustomButton();
@@ -109,18 +108,14 @@ class CustomStackPane extends VBox
         genRandomBtn.setOnAction(event ->
         {
             set.clear();
-            sortedT.setText("Sorting:");
+            sortedT.setText("Sorted:");
 
             List<Integer> choices = new ArrayList<>();
             choices.add(1);  choices.add(2); choices.add(3);choices.add(4);choices.add(5);  choices.add(6);  choices.add(7); choices.add(8);choices.add(9);choices.add(10);
-
-
-
             ChoiceDialog<Integer> dialog = new ChoiceDialog<Integer>(5, choices);
             dialog.setTitle("Random Number");
             dialog.setHeaderText("Random Number Generator");
             dialog.setContentText("How many numbers to generate:");
-
             Stage stage = (Stage) dialog.getDialogPane().getScene().getWindow();
             stage.getIcons().add(
                     new Image(this.getClass().getResource("icon.png").toString()));
@@ -128,9 +123,11 @@ class CustomStackPane extends VBox
             if (result.isPresent()){
                 tf.setEditable(false);
                 set.clear();
-                originalSetT.setText("");
+                originalSetT.setText("Set: ");
                 tf.clear();
-				rangeT.setText("Range: ");
+                meanT.setText("Mean: ");
+                stdDevT.setText("Standard deviation: ");
+                rangeT.setText("Range: ");
                 for (int i = 0 ;i<=result.get();i++){
 
                     set.add(generateNumber());
