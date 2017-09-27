@@ -12,20 +12,22 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
- *@class 
+ * @version 0.2
  * @author AndrewHeath
  */
-public class Run extends Application {
+public class Run extends Application
+{
     
     
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage)
+    {
     
         
         CustomStackPane root = new CustomStackPane();
   
         
-        Scene scene = new Scene(root, 600, 550);
+        Scene scene = new Scene(root, 600, 700);
         primaryStage.setResizable(false);
         primaryStage.getIcons().add(new Image("icon.png"));
         primaryStage.setTitle("Sorting Program");
@@ -39,7 +41,8 @@ public class Run extends Application {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         launch(args);
     }
     

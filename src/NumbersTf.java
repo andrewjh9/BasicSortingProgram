@@ -10,17 +10,21 @@ import java.util.regex.Pattern;
 import javafx.scene.control.TextField;
 
 /**
- *
+ * @version 0.2
  * @author AndrewHeath
  */
-public class NumbersTf extends TextField {
+public class NumbersTf extends TextField
+{
 
-    public NumbersTf() {
+    public NumbersTf()
+    {
 
-            textProperty().addListener((observable, oldValue, newValue) -> {
+            textProperty().addListener((observable, oldValue, newValue) ->
+            {
                 Pattern p = Pattern.compile("-?\\d+");
                 Matcher m = p.matcher(this.getText());
-                while (m.find()) {
+                while (m.find())
+                {
                     this.setText(m.group());
                 }
 
